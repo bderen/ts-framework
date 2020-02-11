@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { Events } from './Events';
 
-export class Collection<T,K>{
+export class Collection<T,K> {
 	models: T[] = [];
 	events: Events = new Events();
 
@@ -10,9 +10,11 @@ export class Collection<T,K>{
 	get on() {
 		return this.events.on;
 	}
+
 	get trigger() {
 		return this.events.trigger;
 	}
+	
 	fetch(): void {
 		axios.get(this.rootUrl).then((response: AxiosResponse) => {
 			response.data.forEach((value: K) => {

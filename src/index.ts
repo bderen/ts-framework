@@ -1,7 +1,17 @@
-import { UserForm } from './views/UserForm';
+import { UserEdit } from './views/UserEdit';
+import { User } from './models/User';
 
-const userForm = new UserForm(
-	document.getElementById('root');
-)
+const root = document.getElementById('root')
+const user = User.buildUser({ name: 'Name', age: 20 })
 
-userForm.render()
+if (root) {
+	const userEdit = new UserEdit(
+		root,
+		user
+	)
+	
+	userEdit.render()
+} else {
+	throw new Error('no root selector')
+}
+
