@@ -1,9 +1,24 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"name": "Bogdan",
-			"age": 38
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "name": "Bogdan",
+      "age": 38
+    },
+    {
+      "name": "Name 1",
+      "age": 20,
+      "id": 2
+    },
+    {
+      "name": "Name 2",
+      "age": 59,
+      "id": 3
+    },
+    {
+      "name": "Name 3",
+      "age": 67,
+      "id": 4
+    }
+  ]
 }
